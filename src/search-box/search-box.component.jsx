@@ -3,9 +3,13 @@ import { Component } from "react";
 class SearchBox extends Component{
 render(){
     return(
-        <div>
-            <p>Howdy I'm the search box component</p>
-        </div>
+        <input
+        className={this.props.className}
+        type='search'
+        placeholder={this.props.placeholder}
+        onChange={this.props.onChangeHandler}>
+        
+        </input>
     );
 }
 }

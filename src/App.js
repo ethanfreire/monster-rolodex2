@@ -1,7 +1,6 @@
 import { Component } from "react";
 import "./App.css";
 import CardList from "./card-list/card-list.component";
-import Card from "./card/card.component";
 import SearchBox from "./search-box/search-box.component";
 class App extends Component{
 constructor(){
@@ -45,16 +44,10 @@ render(){
 
   return (
     <div className="App">
-      <input
-      className="search-box"
-      type='search'
-      placeholder="search monsters"
-      onChange={onSearchChange}>
-      
-      </input>
+      <h1 className="app-title">Monsters Rolodex </h1>
+      <SearchBox  onChangeHandler={onSearchChange} placeholder='search monsters' className = 'monsters search box'></SearchBox>
+
       <CardList monsters={filteredMonsters}></CardList>
-      <SearchBox></SearchBox>
-      <Card></Card>
     </div>
   );
 }
